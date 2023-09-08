@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+    <script>
+        $(document).ready( function () {
+            $('#foodTable').DataTable({
+                "ajax": '/api/fooditems',
+                pageLength: 25,
+                columns: [
+                    {data: 'restaurant'},
+                    {data: 'item'},
+                    {data: 'calories'}
+                ]
+            });
+        } );
+    </script>
+
+    <table id = 'foodTable' class="display">
+        <thead>
+            <tr>
+                <th scope='col'>restaurant</th>
+                <th scope='col'>item</th>
+                <th scope='col'>calories</th>
+            </tr>
+        </thead>
+    </table>
+{% endblock %}

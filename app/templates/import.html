@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+
+
+<form method="POST" action="/import/upload_file" enctype="multipart/form-data">
+    <p>Upload the csv file here</p>
+      <div class="input-group mb-3">
+          <input class="form-control" type="file" name="file" accept=".csv">
+      </div>
+      <div class="input-group mb-4">
+          <input type="submit" class="btn btn-primary" value="Import">
+          <input type="submit" class="btn btn-light" value="Cancel">
+      </div>
+</form>
+{% endblock %}
